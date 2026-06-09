@@ -1,0 +1,56 @@
+Nationality:Uruguay
+Name: Federico Santiago Valverde Dipetta
+Positions: CM,SB,SM,DM,WB
+Registred Positions: ★CM
+Age: 27
+Height: 182
+Weight: 78
+Injury Tolerance: C
+Foot: R
+Side: R
+
+Attack: 83
+Defence: 79
+Balance: 84
+Stamina: 95
+Speed: 94
+Acceleration: 88
+Response: 88
+Agility: 83
+Dribble Accuracy: 85
+Dribble Speed: 87
+Short Pass Accuracy: 88
+Short Pass Speed: 89
+Long Pass Accuracy: 88
+Long Pass Speed: 91
+Shot Accuracy: 82
+Shot Power: 96
+Shot Technique: 86
+Free Kick Accuracy: 78
+Swerve: 79
+Heading: 73
+Jump: 84
+Technique: 87
+Aggression: 88
+Mentality: 91
+GK Skills: 50
+Team work: 86
+
+Consistency: 7
+Condition/Fitness: 8
+Weak Foot Accuracy: 7
+Weak Foot Frequency: 6
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 2
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Reaction
+★Positioning
+★Middle shooting
+★Sliding
+★Covering

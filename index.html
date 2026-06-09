@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PES 6 Stats Database</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">PES 6 Stats <span class="hero-accent">Database</span></h1>
+      <p class="hero-sub">Utiliza nuestra herramienta personal de estadisticas de jugadores para tu personalizar tu parche</p>
+      <a href="#cards" class="hero-btn">Explorar equipos</a>
+      <br>
+      <a href="#cards" class="hero-btn">Jugador Aleatorio</a>
+    </div>
+  </header>
+
+
+  <button onclick="imprimirCartasPais('Argentina')">Argentina</button>
+  <!-- <button onclick="imprimirCartasPais('Portugal')">Portugal</button> -->
+
+
+  <!-- GRID DE CARDS -->
+  <section id="cards" class="cards-section">
+    <h2 class="section-title">Jugadores mejor evaluados</h2>
+    <div class="cards-grid" id="cards-grid">
+      <!-- Las cards se generan dinámicamente desde script.js -->
+    </div>
+  </section>
+
+  <script type="module" src="FIFACard.js"></script>
+</body>
+</html>

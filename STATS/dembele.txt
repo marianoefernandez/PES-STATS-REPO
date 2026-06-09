@@ -1,0 +1,58 @@
+Nationality: Francia
+Name: Masour Ousmane Dembélé
+Positions: CF,WF,SM,AM,SS
+Registred Positions: ★SS
+Age: 29
+Height: 178
+Weight: 67
+Injury Tolerance: B
+Foot: L
+Side: B
+
+Attack: 94
+Defence: 53
+Balance: 79
+Stamina: 81
+Speed: 90
+Acceleration: 94
+Response: 90
+Agility: 94
+Dribble Accuracy: 95
+Dribble Speed: 93
+Short Pass Accuracy: 89
+Short Pass Speed: 86
+Long Pass Accuracy: 84
+Long Pass Speed: 84
+Shot Accuracy: 88
+Shot Power: 91
+Shot Technique: 87
+Free Kick Accuracy: 76
+Swerve: 86
+Heading: 78
+Jump: 84
+Technique: 94
+Aggression: 93
+Mentality: 77
+GK Skills: 50
+Team work: 88
+
+Consistency: 6
+Condition/Fitness: 5
+Weak Foot Accuracy: 8
+Weak Foot Frequency: 8
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 2
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Tactical dribble
+★Positioning
+★Reaction
+★Scoring
+★Lines
+★Centre
+★Outside

@@ -1,0 +1,56 @@
+lastName: Vitinha
+
+Positions: CM,DM,AM
+Registred Positions: ★CM
+Age: 26
+Height: 172
+Weight: 64
+Injury Tolerance: B
+Foot: R
+Side: B
+
+Attack: 85
+Defence: 71
+Balance: 78
+Stamina: 90
+Speed: 75
+Acceleration: 79
+Response: 86
+Agility: 88
+Dribble Accuracy: 93
+Dribble Speed: 84
+Short Pass Accuracy: 94
+Short Pass Speed: 91
+Long Pass Accuracy: 93
+Long Pass Speed: 85
+Shot Accuracy: 82
+Shot Power: 81
+Shot Technique: 84
+Free Kick Accuracy: 77
+Swerve: 85
+Heading: 62
+Jump: 71
+Technique: 93
+Aggression: 86
+Mentality: 83
+GK Skills: 50
+Team work: 89
+Consistency: 7
+Condition/Fitness: 7
+Weak Foot Accuracy: 5
+Weak Foot Frequency: 4
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 4
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Tactical Dribbling
+★Playmaking
+★Passing
+★Centre
+★Penalties
+★1-Touch pass

@@ -1,0 +1,60 @@
+Nationality:Georgia
+Name: Khvicha Kvaratskheliaხვიჩა კვარაცხელია
+Positions: WF,SM,AM
+Registred Positions: ★WF
+Age: 25
+Height: 183
+Weight: 70
+Injury Tolerance: B
+Foot: R
+Side: B
+
+Attack: 90
+Defence: 61
+Balance: 85
+Stamina: 87
+Speed: 86
+Acceleration: 85
+Response: 86
+Agility: 86
+Dribble Accuracy: 94
+Dribble Speed: 88
+Short Pass Accuracy: 88
+Short Pass Speed: 86
+Long Pass Accuracy: 82
+Long Pass Speed: 86
+Shot Accuracy: 85
+Shot Power: 90
+Shot Technique: 87
+Free Kick Accuracy: 79
+Swerve: 88
+Heading: 72
+Jump: 86
+Technique: 94
+Aggression: 88
+Mentality: 81
+GK Skills: 50
+Team work: 84
+
+Consistency: 6
+Condition/Fitness: 6
+Weak Foot Accuracy: 8
+Weak Foot Frequency: 8
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 2
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Tactical dribble
+★Reaction
+★Playmaking
+★Passing
+★Scoring
+★Lines
+★Middle shooting
+★Centre
+★Outside

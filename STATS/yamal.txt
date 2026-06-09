@@ -1,0 +1,61 @@
+Nationality:
+
+España
+Name: Lamine Yamal Nasraoui Ebanaلامين يامال نصراوي إبانا
+Positions: WF,SM,★AM
+Registred Positions: ★WF
+Age: 18
+Height: 181
+Weight: 72
+Injury Tolerance: B
+Foot: L
+Side: R
+
+Attack: 90
+Defence: 36
+Balance: 76
+Stamina: 80
+Speed: 86
+Acceleration: 90
+Response: 85
+Agility: 94
+Dribble Accuracy: 94
+Dribble Speed: 93
+Short Pass Accuracy: 89
+Short Pass Speed: 86
+Long Pass Accuracy: 89
+Long Pass Speed: 83
+Shot Accuracy: 86
+Shot Power: 85
+Shot Technique: 87
+Free Kick Accuracy: 78
+Swerve: 91
+Heading: 58
+Jump: 67
+Technique: 93
+Aggression: 91
+Mentality: 73
+GK Skills: 50
+Team work: 80
+
+Consistency: 6
+Condition/Fitness: 6
+Weak Foot Accuracy: 5
+Weak Foot Frequency: 5
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 2
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Tactical dribble
+★Reaction
+★Playmaking
+★Passing
+★1-1 Scoring
+★Lines
+★1-Touch pass
+★Outside

@@ -1,0 +1,54 @@
+Nationality:Argentina
+Name: Giuliano Simeone
+Positions: SM,WF
+Registred Positions: ★SM
+
+Age: 23
+Height: 174
+Weight: 75
+Injury Tolerance: B
+Foot: R
+Side: B
+
+Attack: 83
+Defence: 58
+Balance: 83
+Stamina: 91
+Speed: 93
+Acceleration: 94
+Response: 85
+Agility: 89
+Dribble Accuracy: 85
+Dribble Speed: 90
+Short Pass Accuracy: 81
+Short Pass Speed: 82
+Long Pass Accuracy: 79
+Long Pass Speed: 84
+Shot Accuracy: 79
+Shot Power: 84
+Shot Technique: 75
+Free Kick Accuracy: 60
+Swerve: 74
+Heading: 73
+Jump: 88
+Technique: 83
+Aggression: 87
+Mentality: 83
+GK Skills: 50
+Team work: 82
+
+Consistency: 6
+Condition/Fitness: 6
+Weak Foot Accuracy: 5
+Weak Foot Frequency: 5
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 4
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Reaction
+★Lines

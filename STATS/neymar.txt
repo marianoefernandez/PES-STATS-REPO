@@ -1,0 +1,56 @@
+Nationality:Brasil
+Name: 
+Last Name: Neymar JR
+
+Positions: AM,WF,SM
+Registred Positions: ★AM
+Age: 34
+Height: 175
+Weight: 68
+
+Injury Tolerance: C
+Foot: R
+Side: L
+
+Attack: 83
+Defence: 37
+Balance: 76
+Stamina: 72
+Speed: 80
+Acceleration: 83
+Response: 81
+Agility: 86
+Dribble Accuracy: 93
+Dribble Speed: 85
+Short Pass Accuracy: 91
+Short Pass Speed: 86
+Long Pass Accuracy: 88
+Long Pass Speed: 81
+Shot Accuracy: 82
+Shot Power: 78
+Shot Technique: 84
+Free Kick Accuracy: 88
+Swerve: 88
+Heading: 70
+Jump: 72
+Technique: 95
+Aggression: 81
+Mentality: 71
+GK Skills: 50
+Team work: 82
+
+Consistency: 4
+Condition/Fitness: 3
+Weak Foot Accuracy: 8
+Weak Foot Frequency: 8
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Tactical dribble
+★Playmaking
+★1-1 Scoring
+★Passing
+★Centre
+★Penalties
+★1-Touch pass

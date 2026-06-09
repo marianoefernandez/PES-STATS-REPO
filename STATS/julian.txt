@@ -1,0 +1,57 @@
+Nationality:Argentina
+Name: Julián Álvarez
+Positions: CF,AM,SS
+Registred Positions: ★CF
+Age: 26
+Height: 170
+Weight: 71
+Injury Tolerance: B
+Foot: R
+Side: B
+Attack: 90
+Defence: 61
+Balance: 84
+Stamina: 87
+Speed: 87
+Acceleration: 88
+Response: 90
+Agility: 88
+Dribble Accuracy: 87
+Dribble Speed: 88
+Short Pass Accuracy: 85
+Short Pass Speed: 86
+Long Pass Accuracy: 81
+Long Pass Speed: 84
+Shot Accuracy: 89
+Shot Power: 91
+Shot Technique: 87
+Free Kick Accuracy: 91
+Swerve: 91
+Heading: 80
+Jump: 88
+Technique: 89
+Aggression: 91
+Mentality: 87
+GK Skills: 50
+Team work: 88
+
+Consistency: 7
+Condition/Fitness: 7
+Weak Foot Accuracy: 7
+Weak Foot Frequency: 7
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 4
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Positioning
+★1-1 Scoring
+★Reaction
+★Middle shooting
+★Passing
+★Scoring
+★Lines
+★Centre

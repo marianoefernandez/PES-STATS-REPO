@@ -1,0 +1,63 @@
+Nationality:
+
+Egipto
+Name: Mohamed Salah Hamed Ghalyمحمد صلاح
+Positions: WF,SM,SS
+Registred Positions: ★WF
+Age: 33
+Height: 175
+Weight: 72
+Injury Tolerance: B
+Foot: L
+Side: R
+
+Attack: 91
+Defence: 45
+Balance: 85
+Stamina: 85
+Speed: 87
+Acceleration: 88
+Response: 89
+Agility: 88
+Dribble Accuracy: 90
+Dribble Speed: 88
+Short Pass Accuracy: 89
+Short Pass Speed: 84
+Long Pass Accuracy: 86
+Long Pass Speed: 81
+Shot Accuracy: 90
+Shot Power: 85
+Shot Technique: 85
+Free Kick Accuracy: 77
+Swerve: 92
+Heading: 69
+Jump: 80
+Technique: 91
+Aggression: 91
+Mentality: 82
+GK Skills: 50
+Team work: 85
+
+Consistency: 7
+Condition/Fitness: 7
+Weak Foot Accuracy: 5
+Weak Foot Frequency: 5
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 4
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Tactical dribble
+★Positioning
+★Playmaking
+★Scoring
+★1-1 Scoring
+★Lines
+★Side
+★Penalties
+★1-Touch pass
+★Outside

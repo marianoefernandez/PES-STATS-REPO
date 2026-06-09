@@ -1,0 +1,57 @@
+Nationality:Argentina
+Name: Lionel Andrés 
+Last Name: Messi
+Positions: AM,CF,WF,SS
+Registred Positions: ★AM
+Age: 38
+Height: 169
+Weight: 67
+
+Injury Tolerance: A
+Foot: L
+Side: R
+
+Attack: 88
+Defence: 35
+Balance: 83
+Stamina: 75
+Speed: 75
+Acceleration: 85
+Response: 86
+Agility: 87
+Dribble Accuracy: 93
+Dribble Speed: 82
+Short Pass Accuracy: 93
+Short Pass Speed: 82
+Long Pass Accuracy: 89
+Long Pass Speed: 78
+Shot Accuracy: 86
+Shot Power: 84
+Shot Technique: 87
+Free Kick Accuracy: 97
+Swerve: 94
+Heading: 70
+Jump: 72
+Technique: 95
+Aggression: 86
+Mentality: 80
+GK Skills: 50
+Team work: 85
+Consistency: 7
+Condition/Fitness: 6
+Weak Foot Accuracy: 7
+Weak Foot Frequency: 7
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Tactical dribble
+★Positioning
+★Reaction
+★Playmaking
+★Passing
+★Scoring
+★1-1 Scoring
+★Centre
+★1-Touch pass
+★Outside

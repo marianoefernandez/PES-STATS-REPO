@@ -1,0 +1,61 @@
+Nationality:Portugal
+
+Name: 
+Last Name: Cristiano Ronaldo
+
+Positions: ★CF,SS,WF
+Registred Positions: CF
+Age: 41
+Height: 187
+Weight: 85
+Injury Tolerance: B
+Foot: R
+Side: L
+
+Attack: 91
+Defence: 30
+Balance: 83
+Stamina: 81
+Speed: 81
+Acceleration: 77
+Response: 88
+Agility: 77
+Dribble Accuracy: 84
+Dribble Speed: 77
+Short Pass Accuracy: 81
+Short Pass Speed: 84
+Long Pass Accuracy: 80
+Long Pass Speed: 85
+Shot Accuracy: 90
+Shot Power: 95
+Shot Technique: 86
+Free Kick Accuracy: 84
+Swerve: 81
+Heading: 91
+Jump: 96
+Technique: 89
+Aggression: 87
+Mentality: 82
+GK Skills: 50
+Team work: 71
+
+Consistency: 7
+Condition/Fitness: 7
+Weak Foot Accuracy: 7
+Weak Foot Frequency: 7
+
+Free kick style: 7
+Drop kick style: 1
+Dribble style: 2
+Penalty style: 2
+
+SPECIAL ABILITIES:
+
+★Tactical dribble
+★Positioning
+★Scoring
+★1-1 Scoring
+★Middle shooting
+★Centre
+★Penalties
+★Outside

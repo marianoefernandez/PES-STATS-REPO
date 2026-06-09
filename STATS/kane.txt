@@ -1,0 +1,64 @@
+Nationality:Reino Unido
+Name: Harry Edward Kane
+Positions: CF, SS
+Registred Positions: ★CF
+Age: 32
+
+Height: 188
+Weight: 86
+
+Injury Tolerance: B
+Foot: R
+Side: B
+
+Attack: 97
+Defence: 58
+Balance: 90
+Stamina: 83
+Speed: 73
+Acceleration: 69
+Response: 96
+Agility: 72
+Dribble Accuracy: 85
+Dribble Speed: 74
+Short Pass Accuracy: 90
+Short Pass Speed: 91
+Long Pass Accuracy: 91
+Long Pass Speed: 89
+Shot Accuracy: 97
+Shot Power: 94
+Shot Technique: 90
+Free Kick Accuracy: 78
+Swerve: 84
+Heading: 93
+Jump: 89
+Technique: 90
+Aggression: 96
+Mentality: 93
+GK Skills: 50
+Team work: 94
+
+Consistency: 8
+Condition/Fitness: 7
+Weak Foot Accuracy: 7
+Weak Foot Frequency: 7
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 3
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Tactical Dribbling
+★Positioning
+★Playmaking
+★Passing
+★Scoring
+★1-1 Scoring
+★Post Player
+★Middle shooting
+★Centre
+★Penalties
+★1-Touch pass
+★Outside

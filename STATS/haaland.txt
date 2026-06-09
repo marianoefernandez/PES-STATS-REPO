@@ -1,0 +1,59 @@
+Nationality:
+
+Noruega
+Name: Erling Braut Håland
+Positions: CF
+Registred Positions: ★CF
+Age: 25
+Height: 195
+Weight: 94
+Injury Tolerance: B
+Foot: L
+Side: B
+
+Attack: 96
+Defence: 52
+Balance: 95
+Stamina: 84
+Speed: 93
+Acceleration: 84
+Response: 96
+Agility: 77
+Dribble Accuracy: 79
+Dribble Speed: 84
+Short Pass Accuracy: 80
+Short Pass Speed: 76
+Long Pass Accuracy: 67
+Long Pass Speed: 81
+Shot Accuracy: 96
+Shot Power: 97
+Shot Technique: 87
+Free Kick Accuracy: 69
+Swerve: 78
+Heading: 88
+Jump: 95
+Technique: 84
+Aggression: 96
+Mentality: 86
+GK Skills: 50
+Team work: 82
+
+Consistency: 7
+Condition/Fitness: 7
+Weak Foot Accuracy: 5
+Weak Foot Frequency: 6
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 1
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Positioning
+★Reaction
+★Scoring
+★1-1 Scoring
+★Post Player
+★Middle shooting
+★Penalties

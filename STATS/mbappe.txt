@@ -1,0 +1,58 @@
+Nationality: Francia
+Name: Kylian Mbappé Lottin
+Positions: CF,WF,SM
+Registred Positions: ★CF
+Age: 27
+Height: 182
+Weight: 81
+Injury Tolerance: B
+Foot: R
+Side: L
+
+Attack: 96
+Defence: 38
+Balance: 83
+Stamina: 86
+Speed: 95
+Acceleration: 96
+Response: 95
+Agility: 93
+Dribble Accuracy: 93
+Dribble Speed: 94
+Short Pass Accuracy: 88
+Short Pass Speed: 89
+Long Pass Accuracy: 80
+Long Pass Speed: 83
+Shot Accuracy: 95
+Shot Power: 93
+Shot Technique: 89
+Free Kick Accuracy: 79
+Swerve: 83
+Heading: 83
+Jump: 89
+Technique: 91
+Aggression: 97
+Mentality: 86
+GK Skills: 50
+Team work: 81
+
+Consistency: 7
+Condition/Fitness: 7
+Weak Foot Accuracy: 7
+Weak Foot Frequency: 7
+
+Free kick style: 1
+Drop kick style: 1
+Dribble style: 2
+Penalty style: 1
+
+SPECIAL ABILITIES:
+
+★Dribbling
+★Positioning
+★Reaction
+★Scoring
+★1-1 Scoring
+★Lines
+★1-Touch pass
+★Outside
