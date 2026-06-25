@@ -1,5 +1,9 @@
 // En Node.js:
 import {parsePES6PlayersFromCSV} from './archivos.js'
+import PlayerModal from './PlayerModal.js'
+
+const playerModal = new PlayerModal();
+
 class FIFACard {
 
   // ── CONSTRUCTOR ──────────────────────────────────────────────────────
@@ -7,6 +11,7 @@ class FIFACard {
    * @param {Object} [data={}] - Datos iniciales (todos opcionales)
    */
   constructor(data = {}) {
+    this._id         = data.id         ?? null;
     this._name       = data.name       ?? 'JUGADOR';
     this._rating     = data.rating     ?? 75;
     this._pos        = data.pos        ?? 'ST';
@@ -120,10 +125,28 @@ class FIFACard {
     `;
   }
 
+  /** Busca el jugador completo por id en JUGADORES y abre el modal de detalle. */
+  _handleClick() {
+    if (this._id === null) return;
+
+    const player = window.JUGADORES?.find(j => String(j.id) === String(this._id));
+    if (!player) {
+      console.warn(`FIFACard: no se encontró el jugador con id "${this._id}".`);
+      return;
+    }
+
+    playerModal.open(player, {
+      photoUrl: this._photo,
+      nationFlagUrl: this._nationLogo,
+    });
+  }
+
   /** Genera el elemento DOM de la carta */
   _build() {
     const el = document.createElement('div');
     el.className = `card card--${this._getCardType()}`;
+    el.dataset.playerId = this._id ?? '';
+    el.addEventListener('click', () => this._handleClick());
     el.innerHTML = `
       <div class="card-shine"></div>
 
@@ -260,6 +283,8 @@ async function imprimirCartas(cartas)
 const JUGADORES = await fetch("jugadores.csv")
   .then(r => r.text())
   .then(parsePES6PlayersFromCSV);
+
+window.JUGADORES = JUGADORES; // necesario para que la carta pueda buscar el jugador al click
 
 
 async function crearCartas(pais)

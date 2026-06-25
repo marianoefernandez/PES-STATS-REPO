@@ -266,7 +266,7 @@ export default class PES6Player {
 
     const WF = Math.round(((this.weakFootAccuracy * 1.5 + this.weakFootFrequency * 0.5) / 2) / 1.6);
 
-    return { name: this.lastName, photo:foto,clubLogo:clubFoto,nationLogo:fotoPais,rating: rating, pos: this.registeredPosition,  pac: PAC, sho: SHO, pas: PAS, dri: DRI, def: DEF, phy: PHY, weakFoot: WF, dominantFoot:this.foot };
+    return { id: this.id, name: this.lastName, photo:foto,clubLogo:clubFoto,nationLogo:fotoPais,rating: rating, pos: this.registeredPosition,  pac: PAC, sho: SHO, pas: PAS, dri: DRI, def: DEF, phy: PHY, weakFoot: WF, dominantFoot:this.foot };
 
   }
 
