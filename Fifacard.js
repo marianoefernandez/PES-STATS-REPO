@@ -89,6 +89,17 @@ class FIFACard {
 
   // ── MÉTODOS INTERNOS ─────────────────────────────────────────────────
 
+  /**
+   * Devuelve el tipo de carta según el rating.
+   * @returns {'gold-rare'|'gold'|'silver'|'bronze'}
+   */
+  _getCardType() {
+    if (this._rating >= 82) return 'gold-rare';
+    if (this._rating >= 75) return 'gold';
+    if (this._rating >= 70) return 'silver';
+    return 'bronze';
+  }
+
   /** Genera el HTML de estrellas */
   _starsHTML(count) {
     let html = '';
@@ -112,7 +123,7 @@ class FIFACard {
   /** Genera el elemento DOM de la carta */
   _build() {
     const el = document.createElement('div');
-    el.className = 'card';
+    el.className = `card card--${this._getCardType()}`;
     el.innerHTML = `
       <div class="card-shine"></div>
 
@@ -153,15 +164,15 @@ class FIFACard {
 
       <div class="stats-grid">
         <div class="stats-col">
-          <div class="stat"><span class="stat-val">${this._pac}</span><span class="stat-lbl">PAC</span></div>
-          <div class="stat"><span class="stat-val">${this._sho}</span><span class="stat-lbl">SHO</span></div>
-          <div class="stat"><span class="stat-val">${this._pas}</span><span class="stat-lbl">PAS</span></div>
+          <div class="stat"><span class="stat-val">${this._pac}</span><span class="stat-lbl">${this._pos === 'GK' ? 'DIV' : 'PAC'}</span></div>
+          <div class="stat"><span class="stat-val">${this._sho}</span><span class="stat-lbl">${this._pos === 'GK' ? 'HAN' : 'SHO'}</span></div>
+          <div class="stat"><span class="stat-val">${this._pas}</span><span class="stat-lbl">${this._pos === 'GK' ? 'KIC' : 'PAS'}</span></div>
         </div>
         <div class="stats-divider"></div>
         <div class="stats-col">
-          <div class="stat"><span class="stat-val">${this._dri}</span><span class="stat-lbl">DRI</span></div>
-          <div class="stat"><span class="stat-val">${this._def}</span><span class="stat-lbl">DEF</span></div>
-          <div class="stat"><span class="stat-val">${this._phy}</span><span class="stat-lbl">PHY</span></div>
+          <div class="stat"><span class="stat-val">${this._dri}</span><span class="stat-lbl">${this._pos === 'GK' ? 'REF' : 'DRI'}</span></div>
+          <div class="stat"><span class="stat-val">${this._def}</span><span class="stat-lbl">${this._pos === 'GK' ? 'SPD' : 'DEF'}</span></div>
+          <div class="stat"><span class="stat-val">${this._phy}</span><span class="stat-lbl">${this._pos === 'GK' ? 'POS' : 'PHY'}</span></div>
         </div>
       </div>
 
@@ -258,8 +269,6 @@ async function crearCartas(pais)
   JUGADORES.forEach( async jugador => {
     if(pais == "cualquiera" || pais == jugador.nationality)
     {
-      console.log(pais)
-      console.log(jugador.nationality)
       const rating = jugador.getOverallRating()
       const carta = await jugador.getCardObject(rating);
       cartas.push(carta);
@@ -274,6 +283,6 @@ window.imprimirCartasPais = async (pais) => {
   await imprimirCartas(cartas);
 };
 
-const cartas = await crearCartas("Argentina")
+const cartas = await crearCartas("cualquiera")
 await imprimirCartas(cartas);
 //limpiarContenedor();

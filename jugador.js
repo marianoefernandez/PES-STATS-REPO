@@ -169,31 +169,34 @@ export default class PES6Player {
   getOverallRating()
   {
     //CF --> default    
-    let values = [ 10, 0, 5, 1, 4, 4, 9, 0, 4, 1, 3,1, 0, 0, 17, 8, 5, 10, 4, 8, 6, 0];
+    let values = [ 10, 0, 5, 1, 4, 4, 9, 0, 4, 1, 3,1, 0, 0, 17, 8, 5, 10, 4, 8, 6, 0,0];
     switch(this.registeredPosition)
     {
       case "SS":
-        values = [9, 0, 4, 2, 6, 7, 8, 0, 7, 2, 5,1, 0, 0, 13, 7, 5, 5, 2, 10, 7, 0]
+        values = [9, 0, 4, 2, 6, 7, 8, 0, 7, 2, 5,1, 0, 0, 13, 7, 5, 5, 2, 10, 7, 0,0]
         break;
       case "WG":
-        values = [6, 0, 1, 3, 7, 7, 5, 3, 12, 7, 5,1, 2, 1, 8, 5, 5, 0, 2, 12, 8, 0]
+        values = [6, 0, 1, 3, 7, 7, 5, 3, 12, 7, 5,1, 2, 1, 8, 5, 5, 0, 2, 12, 8, 0,0]
         break;
       case "AM":
-        values = [6, 0, 0, 2, 4, 5, 4, 6, 11, 4, 15, 3, 6, 2, 5, 2, 7, 0, 0, 15, 3, 0]
+        values = [6, 0, 0, 2, 4, 5, 4, 6, 11, 4, 15, 3, 6, 2, 5, 2, 7, 0, 0, 15, 3, 0,0]
         break;
       case "CM":
-        values = [4, 5, 2, 9, 2, 2, 6, 0, 7, 2, 15, 3, 13, 3, 2, 3, 6, 0, 0, 15, 1, 0];
+        values = [4, 5, 2, 9, 2, 2, 6, 0, 7, 2, 15, 3, 13, 3, 2, 3, 6, 0, 0, 15, 1, 0,0];
         break;
       case "SM":
-        values = [5, 0, 0, 6, 7, 7, 3, 3, 12, 6, 7,3, 8, 5, 3, 2, 4, 0, 0, 12, 7, 0];
+        values = [5, 0, 0, 6, 7, 7, 3, 3, 12, 6, 7,3, 8, 5, 3, 2, 4, 0, 0, 12, 7, 0,0];
         break;
       case "SB":
       case "WB":
-        values = [3, 6, 2, 16, 9, 9, 4, 3, 3, 5, 6, 2, 10, 6, 0, 0, 0, 2, 3, 7, 4, 0];
+        values = [3, 6, 2, 16, 9, 9, 4, 3, 3, 5, 6, 2, 10, 6, 0, 0, 0, 2, 3, 7, 4, 0,0];
         break;
       case "CBT":
       case "CWP":
-        values = [0, 40, 15, 1, 3, 0, 18, 0, 0, 0, 2,0, 1, 0, 0, 0, 0, 12, 5, 3, 0, 0]
+        values = [0, 40, 15, 1, 3, 0, 18, 0, 0, 0, 2,0, 1, 0, 0, 0, 0, 12, 5, 3, 0, 0,0]
+        break;
+      case "GK":
+        values = [0, 15, 5, 0, 0, 0, 30, 10, 0, 0, 0, 0, 2, 1, 0, 0, 0, 0, 12, 1, 2, 18,4]
         break;
     }
     const overallRating = this.getRating(values.map(value => value / 100));
@@ -225,7 +228,8 @@ export default class PES6Player {
         this.jump * values[18] +
         this.technique * values[19] +
         this.aggression * values[20] +
-        this.gkSkills * values[21]
+        this.gkSkills * values[21] + 
+        this.mentality * values[22]
     ));
   }
 
@@ -242,12 +246,24 @@ export default class PES6Player {
       foto = `fotos/jugadores/0.webp`;
     }
 
-    const PAC = Math.round((this.speed * 1.01 + this.acceleration * 0.99) / 2);
-    const DRI = Math.round((this.dribbleAccuracy * 1.2 + this.dribbleSpeed * 0.6 + this.agility + this.technique * 1.2) / 4);
-    const SHO = Math.round((this.attack * 1.2 + this.shotAccuracy * 1.2 + this.shotPower + this.shotTechnique * 0.8 + this.aggression * 0.8) / 5);
-    const PAS = Math.round((this.shortPassAccuracy * 1.5 + this.shortPassSpeed * 0.5 + this.longPassAccuracy * 1.5 + this.longPassSpeed * 0.5 + this.freeKickAccuracy + this.swerve) / 6);
-    const DEF = Math.round((this.defence * 1.5 + this.response * 0.5) / 2);
-    const PHY = Math.round((this.balance * 1.4 + this.stamina * 1.4 + this.jump * 0.6 + this.response * 0.6) / 4);
+    let PAC = Math.round((this.speed * 1.01 + this.acceleration * 0.99) / 2);
+    let DRI = Math.round((this.dribbleAccuracy * 1.2 + this.dribbleSpeed * 0.6 + this.agility + this.technique * 1.2) / 4);
+    let SHO = Math.round((this.attack * 1.2 + this.shotAccuracy * 1.2 + this.shotPower + this.shotTechnique * 0.8 + this.aggression * 0.8) / 5);
+    let PAS = Math.round((this.shortPassAccuracy * 1.5 + this.shortPassSpeed * 0.5 + this.longPassAccuracy * 1.5 + this.longPassSpeed * 0.5 + this.freeKickAccuracy + this.swerve) / 6);
+    let DEF = Math.round((this.defence * 1.5 + this.response * 0.5) / 2);
+    let PHY = Math.round((this.balance * 1.4 + this.stamina * 1.4 + this.jump * 0.6 + this.response * 0.6) / 4);
+
+    if(this.registeredPosition == "GK")
+    {
+      DEF = PAC
+      PAS = Math.round((this.longPassAccuracy * 1.5 + this.longPassSpeed + this.technique * 0.8 + this.teamwork) / 4);
+      DRI = Math.round((this.response * 1.6 + this.agility * 0.9 + this.jump * 0.5) / 3);
+      PHY = Math.round((this.defence * 1.5 + this.teamwork * 0.6 + this.mentality * 0.5 + this.aggression * 0.4) / 3);
+      PAC = Math.round((this.jump * 1.6 + this.agility + this.balance * 0.8 + this.response * 0.6) / 4);
+      SHO = Math.round((this.response * 1.2 + this.gkSkills * 1.2 + this.agility * 0.6) / 3);
+    }
+    
+
     const WF = Math.round(((this.weakFootAccuracy * 1.5 + this.weakFootFrequency * 0.5) / 2) / 1.6);
 
     return { name: this.lastName, photo:foto,clubLogo:clubFoto,nationLogo:fotoPais,rating: rating, pos: this.registeredPosition,  pac: PAC, sho: SHO, pas: PAS, dri: DRI, def: DEF, phy: PHY, weakFoot: WF, dominantFoot:this.foot };
