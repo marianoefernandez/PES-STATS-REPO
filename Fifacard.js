@@ -1,8 +1,21 @@
 // En Node.js:
 import {parsePES6PlayersFromCSV} from './archivos.js'
-import PlayerModal from './PlayerModal.js'
+import PlayerView from './PlayerView.js'
 
-const playerModal = new PlayerModal();
+const playerView = new PlayerView({
+  onBack: () => {
+    const grid = document.getElementById('cards-grid');
+    const sections = document.querySelectorAll('body > *:not(.pv-view)');
+    sections.forEach(el => el.style.display = '');
+  }
+});
+
+/** Oculta el resto de la página y deja solo la vista de detalle. */
+function showPlayerView() {
+  document.querySelectorAll('body > *:not(.pv-view)').forEach(el => {
+    el.style.display = 'none';
+  });
+}
 
 class FIFACard {
 
@@ -125,7 +138,7 @@ class FIFACard {
     `;
   }
 
-  /** Busca el jugador completo por id en JUGADORES y abre el modal de detalle. */
+  /** Busca el jugador completo por id en JUGADORES y abre la vista de detalle. */
   _handleClick() {
     if (this._id === null) return;
 
@@ -135,7 +148,8 @@ class FIFACard {
       return;
     }
 
-    playerModal.open(player, {
+    showPlayerView();
+    playerView.open(player, {
       photoUrl: this._photo,
       nationFlagUrl: this._nationLogo,
     });
