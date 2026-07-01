@@ -200,7 +200,7 @@ export default class PES6Player {
         break;
     }
     const overallRating = this.getRating(values.map(value => value / 100));
-
+    
     return overallRating
   }
 

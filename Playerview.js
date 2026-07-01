@@ -232,7 +232,7 @@ class PlayerView {
     `;
   }
 
-  /** Todas las secciones (stats, skills, positions) en una sola vista con scroll. */
+  /** Todas las secciones (stats, skills, positions) en una sola vista, en columnas. */
   _buildBody(player) {
     const statRows1 = STAT_GROUP_1.map(([prop, label]) => this._row99(label, player[prop])).join('');
     const statRows2 = STAT_GROUP_2.map(([prop, label]) => this._row99(label, player[prop])).join('');
@@ -250,23 +250,30 @@ class PlayerView {
       .join('');
 
     return `
-      <div class="pv-section">
-        <h3 class="pv-section-title">Stats</h3>
-        <div class="pv-table">${statRows1}${statRows2}${extraRows}</div>
-      </div>
+      <div class="pv-grid">
+        <div class="pv-section pv-section--stats1">
+          <h3 class="pv-section-title">Stats (1)</h3>
+          <div class="pv-table">${statRows1}</div>
+        </div>
 
-      <div class="pv-section">
-        <h3 class="pv-section-title">Special skills</h3>
-        <div class="pv-table">${skillRows}</div>
-      </div>
+        <div class="pv-section pv-section--stats2">
+          <h3 class="pv-section-title">Stats (2)</h3>
+          <div class="pv-table">${statRows2}${extraRows}</div>
+        </div>
 
-      <div class="pv-section">
-        <h3 class="pv-section-title">Positions</h3>
-        <div class="pv-table">
-          ${positionRows}
-          <div class="pv-row">
-            <span class="pv-row-label">Fav. side/foot</span>
-            <span class="pv-row-val">${player.side}&amp;${player.foot}</span>
+        <div class="pv-section pv-section--skills">
+          <h3 class="pv-section-title">Special skills</h3>
+          <div class="pv-table">${skillRows}</div>
+        </div>
+
+        <div class="pv-section pv-section--positions">
+          <h3 class="pv-section-title">Positions</h3>
+          <div class="pv-table">
+            ${positionRows}
+            <div class="pv-row">
+              <span class="pv-row-label">Fav. side</span>
+              <span class="pv-row-val">${player.side}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -293,7 +300,10 @@ class PlayerView {
     history.pushState({ pmView: 'player', playerId: player.id }, '', `#jugador-${player.id}`);
 
     this._show();
-    window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+
+    // Forzamos el scroll al tope, tanto de la página como del contenedor de la vista.
+    this._root.scrollTop = 0;
+    window.scrollTo(0, 0);
   }
 
   /** Vuelve al grid. Si hay historial propio, usa history.back(); si no, oculta directo. */

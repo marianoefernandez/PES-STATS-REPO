@@ -513,8 +513,8 @@ body.pv-locked {
 }
 
 .pv-content {
-  max-width: 480px;
-  margin: 8px auto 60px;
+  max-width: 1400px;
+  margin: 8px auto 40px;
   padding: 0 16px;
 }
 
@@ -525,12 +525,13 @@ body.pv-locked {
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  max-width: 600px;
 }
 
 .pv-photo-wrap {
-  width: 160px;
-  min-width: 160px;
-  height: 170px;
+  width: 130px;
+  min-width: 130px;
+  height: 130px;
   background: #333;
   display: flex;
   align-items: center;
@@ -597,6 +598,7 @@ body.pv-locked {
   background: #2d3640;
   padding: 10px 14px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  max-width: 600px;
 }
 
 .pv-pos-tag {
@@ -620,9 +622,22 @@ body.pv-locked {
   letter-spacing: 0.5px;
 }
 
-/* ── SECCIONES (todo en una sola vista, con scroll) ── */
+/* ── GRID DE SECCIONES (stats, skills, positions lado a lado) ── */
+.pv-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+  align-items: start;
+}
+
+.pv-section--stats1    { grid-column: 1; }
+.pv-section--stats2    { grid-column: 2; }
+.pv-section--skills    { grid-column: 3; }
+.pv-section--positions { grid-column: 4; }
+
 .pv-section {
-  margin-top: 22px;
+  margin-top: 0;
 }
 
 .pv-section-title {
@@ -648,47 +663,65 @@ body.pv-locked {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7px 14px;
-  border-bottom: 1px solid #b8b8a8;
+  padding: 5px 12px;
+  border-bottom: 1px solid #575750;
   background: #e4e4da;
 }
 
 .pv-row:nth-child(even) { background: #d6d6c8; }
 
 .pv-row-label {
-  font-size: 12.5px;
+  font-size: 11.5px;
   font-weight: 700;
   color: #1a1a1a;
   font-family: Arial, sans-serif;
 }
 
 .pv-row-val {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 900;
   color: #1a1a1a;
-  min-width: 30px;
+  min-width: 28px;
   text-align: right;
   /* sombra sutil para que el número resalte sobre el fondo claro */
-  text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+  text-shadow: 0 1px 20px rgba(0,0,0,0.35);
 }
 
 /* Colores de stats 1-99 (con sombra ya incluida vía .pv-row-val) */
 .pv-row-val.stat-green  { color: #3d9b1a; }
-.pv-row-val.stat-yellow { color: #c9a400; }
+.pv-row-val.stat-yellow { color: #a28814; }
 .pv-row-val.stat-orange { color: #d97600; }
 .pv-row-val.stat-red    { color: #d42626; }
 
 /* Habilidades especiales / posiciones: estrella */
 .pv-skill-star {
-  font-size: 16px;
+  font-size: 15px;
   color: #c9a400;
   min-width: 16px;
   text-align: right;
   text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 480px) {
+/* ── RESPONSIVE ──
+   Desktop ancho: 4 columnas (todo a la vista, scroll mínimo).
+   Tablet: 2 columnas.
+   Mobile: 1 columna (apiladas, como antes). */
+@media (max-width: 1100px) {
+  .pv-grid { grid-template-columns: repeat(2, 1fr); }
+  .pv-section--stats1    { grid-column: 1; grid-row: 1; }
+  .pv-section--stats2    { grid-column: 2; grid-row: 1; }
+  .pv-section--skills    { grid-column: 1; grid-row: 2; }
+  .pv-section--positions { grid-column: 2; grid-row: 2; }
+}
+
+@media (max-width: 680px) {
+  .pv-grid { grid-template-columns: 1fr; gap: 14px; }
+  .pv-section--stats1,
+  .pv-section--stats2,
+  .pv-section--skills,
+  .pv-section--positions { grid-column: 1; }
+  .pv-header,
+  .pv-name-bar { max-width: 100%; }
   .pv-photo-wrap { width: 120px; min-width: 120px; height: 140px; }
   .pv-name { font-size: 14px; }
   .pv-content { padding: 0 10px; }
