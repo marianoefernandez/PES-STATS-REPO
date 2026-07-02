@@ -286,6 +286,7 @@ function limpiarContenedor()
 async function imprimirCartas(cartas)
 {
   setTimeout(() => {
+    cartas.sort((c1,c2) => c2.rating - c1.rating)
       cartas.forEach(stats => {
       new FIFACard({
         ...stats,
@@ -303,7 +304,7 @@ window.JUGADORES = JUGADORES; // necesario para que la carta pueda buscar el jug
 
 async function crearCartas(pais)
 {
-  const cartas = []
+  let cartas = []
 
   JUGADORES.forEach( async jugador => {
     if(pais == "cualquiera" || pais == jugador.nationality)
@@ -313,8 +314,10 @@ async function crearCartas(pais)
       cartas.push(carta);
     }
   })
+
   return cartas
 }
+
 
 window.imprimirCartasPais = async (pais) => {
   await limpiarContenedor()
@@ -322,6 +325,6 @@ window.imprimirCartasPais = async (pais) => {
   await imprimirCartas(cartas);
 };
 
-const cartas = await crearCartas("cualquiera")
+const cartas = await crearCartas("Argentina")
 await imprimirCartas(cartas);
 //limpiarContenedor();
