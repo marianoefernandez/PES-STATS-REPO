@@ -143,9 +143,12 @@ class PlayerView {
     const root = document.createElement('div');
     root.className = 'pv-view';
     root.innerHTML = `
-      <button class="pv-back">
-        <span class="pv-back-arrow">←</span> Volver
-      </button>
+      <div class="pv-topbar">
+        <button class="pv-back">
+          <span class="pv-back-arrow">←</span> Volver
+        </button>
+        <button class="pv-copy">📋 Copy stats</button>
+      </div>
       <div class="pv-content"></div>
     `;
     root.querySelector('.pv-back').addEventListener('click', () => this.back());
@@ -191,6 +194,130 @@ class PlayerView {
         <span class="pv-skill-star">${active ? '★' : ''}</span>
       </div>
     `;
+  }
+
+  /**
+   * Genera el texto plano con todas las stats del jugador para copiar al portapapeles.
+   * Respeta los nombres exactos del formato PES6.
+   */
+  _buildStatsText(player) {
+    // Posiciones: la registrada lleva ★, el resto sin estrella
+    const posOrder = [
+      ['CF','CF'],['SS','SS'],['WG','WF'],
+      ['AM','AMF'],['SM','SMF'],['CM','CMF'],
+      ['WB','WB'],['DM','DMF'],['SB','SB'],
+      ['CBT','CB'],['CWP','CWP'],['GK','GK'],
+    ];
+    const posStr = posOrder
+      .filter(([prop]) => player.positions[prop])
+      .map(([prop, label]) =>
+        prop === player.registeredPosition ? `${label}★` : label
+      )
+      .join(', ');
+
+    // Skills activos con sus nombres exactos del PES6
+    const SKILL_NAMES = {
+      dribbling:       'Dribbling',
+      tacticalDribble: 'Tactical Dribble',
+      positioning:     'Positioning',
+      reaction:        'Reaction',
+      playmaking:      'Playmaking',
+      passing:         'Passing',
+      scoring:         'Scoring',
+      oneOnOneScoring: '1-1 Scoring',
+      postPlayer:      'Post Player',
+      lines:           'Lines',
+      middleShooting:  'Middle Shooting',
+      side:            'Side',
+      centre:          'Centre',
+      penalties:       'Penalties',
+      oneTouchPass:    '1-Touch Pass',
+      outside:         'Outside',
+      marking:         'Marking',
+      sliding:         'Sliding',
+      covering:        'Covering',
+      dLineControl:    'D-Line Control',
+      penaltyStopper:  'Penalty Stopper',
+      oneOnOneStopper: '1-On-1 Stopper',
+      longThrow:       'Long Throw',
+    };
+
+    const activeSkills = Object.entries(player.specialSkills)
+      .filter(([, active]) => active)
+      .map(([prop]) => `★ ${SKILL_NAMES[prop]}`)
+      .join('\n');
+
+    const lines = [
+      `Name: ${player.fullName}`,
+      `Shirt Name: ${player.lastName.toUpperCase()}`,
+      `Positions: ${posStr}`,
+      `Nationality: ${player.nationality}`,
+      `Age: ${player.age}`,
+      `Height: ${player.height} cm`,
+      `Weight: ${player.weight} kg`,
+      `Injury Tolerance: ${player.injuryTolerance}`,
+      `Foot: ${player.foot}`,
+      `Side: ${player.side}`,
+      `Attack: ${player.attack}`,
+      `Defence: ${player.defence}`,
+      `Balance: ${player.balance}`,
+      `Stamina: ${player.stamina}`,
+      `Top Speed: ${player.speed}`,
+      `Acceleration: ${player.acceleration}`,
+      `Response: ${player.response}`,
+      `Agility: ${player.agility}`,
+      `Dribble Accuracy: ${player.dribbleAccuracy}`,
+      `Dribble Speed: ${player.dribbleSpeed}`,
+      `Short Pass Accuracy: ${player.shortPassAccuracy}`,
+      `Short Pass Speed: ${player.shortPassSpeed}`,
+      `Long Pass Accuracy: ${player.longPassAccuracy}`,
+      `Long Pass Speed: ${player.longPassSpeed}`,
+      `Shot Accuracy: ${player.shotAccuracy}`,
+      `Shot Power: ${player.shotPower}`,
+      `Shot Technique: ${player.shotTechnique}`,
+      `Free Kick Accuracy: ${player.freeKickAccuracy}`,
+      `Curling: ${player.swerve}`,
+      `Header: ${player.heading}`,
+      `Jump: ${player.jump}`,
+      `Technique: ${player.technique}`,
+      `Aggression: ${player.aggression}`,
+      `Mentality: ${player.mentality}`,
+      `Keeper Skills: ${player.gkSkills}`,
+      `Teamwork: ${player.teamwork}`,
+      `Condition/Fitness: ${player.condition}`,
+      `Weak Foot Accuracy: ${player.weakFootAccuracy}`,
+      `Weak Foot Frequency: ${player.weakFootFrequency}`,
+    ];
+
+    if (activeSkills) {
+      lines.push('SPECIAL ABILITIES:');
+      lines.push(activeSkills);
+    }
+
+    return lines.join('\n');
+  }
+
+  /** Copia las stats al portapapeles y da feedback visual en el botón. */
+  async _copyStats(player, btn) {
+    const text = this._buildStatsText(player);
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      // Fallback para navegadores sin Clipboard API
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+    btn.textContent = '✓ Copied!';
+    btn.classList.add('pv-copy--success');
+    setTimeout(() => {
+      btn.textContent = '📋 Copy stats';
+      btn.classList.remove('pv-copy--success');
+    }, 2000);
   }
 
   /** Header con foto + datos personales del jugador. */
@@ -298,6 +425,12 @@ class PlayerView {
 
     // Apilamos un estado en el historial para poder volver con el botón Atrás.
     history.pushState({ pmView: 'player', playerId: player.id }, '', `#jugador-${player.id}`);
+
+    // Conectamos el botón Copy stats al jugador actual
+    const copyBtn = this._root.querySelector('.pv-copy');
+    copyBtn.textContent = '📋 Copy stats';
+    copyBtn.classList.remove('pv-copy--success');
+    copyBtn.onclick = () => this._copyStats(player, copyBtn);
 
     this._show();
 
